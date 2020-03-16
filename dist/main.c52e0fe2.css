@@ -1,0 +1,56 @@
+/*settings*/
+
+.settings {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4em;
+    z-index: 2;
+    transition: opacity .3s;
+    opacity: 0;
+}
+
+.set{
+    width: 3em;
+    height: 3em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    cursor: pointer;
+    margin: 10px;
+}
+
+
+.settings:hover {
+    opacity: 1;
+}
+
+/*menu*/
+.menu{
+    border: 1px solid red;
+    width: 20%;
+    height: 100%;
+    z-index:10;
+    position: fixed;
+    left: 0;
+}
+
+.menu .close{
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.menu .detail{
+    margin-top: 50px;
+    color: white;
+}
+
+.menu .tab{
+    margin-bottom: 16px;
+}
+
+
+/*# sourceMappingURL=/main.c52e0fe2.css.map */

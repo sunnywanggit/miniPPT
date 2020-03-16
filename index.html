@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>reveal.js – The HTML Presentation Framework</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        // var link = document.createElement('link');
+        // link.rel = 'stylesheet';
+        // link.type = 'text/css';
+        // if(window.location.search.match(/print-pdf/gi)){
+        //     link.href = 'css/print/pdf.css';
+        //     window.print()
+        // }else{
+        //     link.href = 'css/print/paper.css';
+        // }
+        // document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="settings">
+    <svg class="icon set" aria-hidden="true">
+        <use xlink:href="#icon-shezhi"></use>
+    </svg>
+</div>
+
+<div class="menu">
+        <span class="close">
+            <svg class="icon close" aria-hidden="true">
+                <use xlink:href="#icon-close"></use>
+            </svg>
+        </span>
+    <div class="detail">
+        <div class="tab active">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-pen"></use>
+            </svg>
+            内容编辑
+        </div>
+        <div class="tab">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-theme"></use>
+            </svg>
+           主题特效
+        </div>
+        <div class="tab">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-download"></use>
+            </svg>
+            下载文件
+        </div>
+        <div class="tab">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-download"></use>
+            </svg>
+            下载文件
+        </div>
+        <div class="content active edit">
+            <h1>内容编辑</h1>
+            <textarea cols="30" rows="10" class="text" ></textarea>
+            <!-- 这种处理方式你要学习，使用label和input结合模拟button的效果，方便个性化定制-->
+            <label for="img-uploader">选择图片</label>
+            <input type="file" id="img-uploader" accept="image/*">
+            <button class="submitEdit">保存</button>
+        </div>
+        <div class="content">
+            <h1>主题特效</h1>
+            <div class="themes clearfix">
+                <figure  data-theme="beige">
+                    <img src="./img/beige.png" alt="beige">
+                    <figcaption>beige</figcaption>
+                </figure>
+                <figure data-theme="black" >
+                    <img src="./img/black.png" alt="black">
+                    <figcaption>black</figcaption>
+                </figure>
+                <figure data-theme="blood" >
+                    <img src="./img/blood.png" alt="blood">
+                    <figcaption>blood</figcaption>
+                </figure>
+                <figure data-theme="league" >
+                    <img src="./img/league.png" alt="league">
+                    <figcaption>league</figcaption>
+                </figure>
+                <figure data-theme="moon" >
+                    <img src="./img/moon.png" alt="moon">
+                    <figcaption>moon</figcaption>
+                </figure>
+                <figure data-theme="night" >
+                    <img src="./img/night.png" alt="night">
+                    <figcaption>night</figcaption>
+                </figure>
+                <figure data-theme="serif" >
+                    <img src="./img/serif.png" alt="serif">
+                    <figcaption>serif</figcaption>
+                </figure>
+                <figure data-theme="simple" >
+                    <img src="./img/simple.png" alt="simple">
+                    <figcaption>simple</figcaption>
+                </figure>
+                <figure data-theme="sky" >
+                    <img src="./img/sky.png" alt="sky">
+                    <figcaption>sky</figcaption>
+                </figure>
+                <figure data-theme="solarized" >
+                    <img src="./img/solarized.png" alt="solarized">
+                    <figcaption>solarized</figcaption>
+                </figure>
+                <figure data-theme="white" >
+                    <img src="./img/white.png" alt="white">
+                    <figcaption>white</figcaption>
+                </figure>
+            </div>
+            <select name="select" class="effect">
+                <option value="slide" selected>滑动</option>
+                <option value="fade">淡入淡出</option>
+                <option value="convex">凸出</option>
+                <option value="concave">凹陷</option>
+                <option value="zoom">缩放</option>
+            </select>
+            <select name="position" class="position">
+                <option value="center">居中</option>
+                <option value="left">居左</option>
+            </select>
+
+        </div>
+
+        <div class="content">
+
+            <h1>下载文件</h1>
+            <a href='#' class="download">点击下载</a>
+
+        </div>
+    </div>
+</div>
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+    </div>
+</div>
+</body>
+
+<script src="js/reveal.js"></script>
+<!-- 存储服务 -->
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@4.3.1/dist/av-min.js"></script>
+<!-- 即时通讯服务 -->
+<script src="//cdn.jsdelivr.net/npm/leancloud-realtime@5.0.0-rc.0/dist/realtime-browser.min.js"></script>
+<script src="js/main.js"></script>
+<script src="//at.alicdn.com/t/font_1690820_uhu4xlk1swh.js"></script>
+</html>
